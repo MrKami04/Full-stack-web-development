@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box1{
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            animation-name: bgcolor;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+
+        @keyframes bgcolor{
+            from{
+                background-color: red;
+
+            }
+            to{
+                background-color: yellow;
+
+            }
+        }
+
+        .box2{
+            border: 5px solid green;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            border-radius: 100%;
+            animation-name: main;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .box3{
+            background-color: black;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            /* animation-duration: 2s;
+            animation-name: run;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+            
+        }
+
+        @keyframes main{
+            from{
+                transform: rotate(0deg);
+
+            }
+            to{
+                transform: rotate(360deg);
+
+            }
+        }
+
+        @keyframes run{
+            0%{
+                transform: translate(0,0);
+
+            }
+            25%{
+                transform: translate(300px, 0);
+            }
+            50%{
+                transform: translate(300px,300px);
+            }
+            75%{
+                transform: translate(0px, 300px);
+            }
+            100%{
+                transform: translate(0px, 0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+
+
+    <div class="box1"></div>
+
+    <div class="box2"><div class="box3"></div></div>
+</body>
+</html>

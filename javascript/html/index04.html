@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/index08.js" defer></script>
+    <style>
+        h1 {
+            color: rgb(50, 234, 87);
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="head">Hello class</h1>
+
+    <a href="https://chatgpt.com/" id="link">ChatGPT</a>
+
+   <ol  id="order">
+    <li>grok</li>
+    <li>Hello</li>
+    <li>JavaScript</li>
+   </ol>
+
+    <ul id="unorder">
+        <li>gpt</li>
+    <li>html</li>
+    <li>css</li>
+    </ul>
+    
+    
+    <script>
+        let a = document.getElementById("head").style.color="red";
+        // console.log(a);
+
+        let b = (document.querySelector("#link").attributes[0].value = "https://www.mathworks.com/?s_tid=user_nav_logo");
+        // console.log(b);
+
+        let para = document.getElementById("p1").innerHTML;
+        console.log(para);
+        let list1 = document.getElementById("unorder").innerText;
+
+        console.log(list1);
+
+    </script>
+</body>
+
+<body>
+    <script>
+        let heading = document.createElement("h1");
+        heading.setAttribute("id", "hello");
+        console.log(heading);
+        let text = document.createTextNode("Hello, I am created by JS💥🤩");
+        heading.appendChild(text);
+        document.body.appendChild(heading);
+        console.log(text);
+    </script>
+</body>
+</html>

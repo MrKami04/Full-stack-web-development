@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+      button {
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+
+      .pas {
+        border: 1px solid black;
+        width: 200px;
+        border-radius: 5px;
+
+      }
+
+    .pas input {
+        border: none;
+        outline: none;
+    }
+    </style>
+  </head>
+  <body>
+    <select name="options" id="options" onchange="changeValue()">
+      <option value="car">car</option>
+      <option value="bike">bike</option>
+      <option value="bus">bus</option>
+    </select>
+
+    <button id="btn" onclick="changeColor()">Click Me</button>
+
+    <h1 id="pp"></h1>
+
+    <input type="color" name="" id="piker" onchange="changeColor()" />
+
+    <div class="pas">
+
+        <input type="password" name="" id="pass"><i class="bi bi-eye-fill" id="password" onclick='password()'></i>
+
+    </div>
+    
+
+    <textarea name="" id="" onselect="selectcontent()">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure eum quas quia. Dicta repellendus nostrum distinctio porro ullam blanditiis delectus.</textarea
+    >
+
+    <p id="message"></p>
+    ---------------dark mode----------------
+
+    <p id="ppa" >
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+      eligendi possimus enim ratione modi eius aliquid quibusdam exercitationem
+      laudantium dolorem, ipsum dolores! Adipisci nemo deleniti iste quae odio
+      natus facere libero, tenetur, officia, laborum quisquam quo animi
+      explicabo quod sequi fugiat soluta enim totam exercitationem architecto
+      nisi. Nisi repudiandae amet quae, eos est quos laborum. Consequatur odio
+      laudantium laboriosam voluptas possimus veniam, iure adipisci omnis!
+      Aperiam, reiciendis libero quisquam officiis voluptas error quae minus
+      corrupti provident eaque quod explicabo laudantium totam quis? Magni
+      doloribus cumque aspernatur aliquid maxime, blanditiis optio quo ipsam! Ad
+      eum facere repellendus minus ipsa sapiente necessitatibus!
+    </p>
+<i class="bi bi-toggle-on" id="toggle" onclick="darkmode()"></i>
+
+
+<button onclick="increment()">increment</button>
+<h1 id="value"></h1>
+<button onclick="decrement()">decrement</button>
+
+    <script>
+      function changeColor() {
+        document.getElementById("btn").style.backgroundColor = "red";
+      }
+
+      function changeValue() {
+        let selectedValue = document.getElementById("options").value;
+        console.log(selectedValue);
+        document.getElementById("pp").innerText =
+          "you select:-" + selectedValue;
+      }
+
+      function selectcontent() {
+        document.getElementById("message").innerText =
+          "you selected the content";
+      }
+
+      function changeColor() {
+        let color = document.getElementById("piker").value;
+        document.body.style.backgroundColor = color;
+        console.log(color);
+      }
+
+      function darkmode() {
+        let bgcolor = document.body.style.backgroundColor;
+
+        if (bgcolor === "" || bgcolor === "white") {
+          document.body.style.backgroundColor = "black";
+          document.body.style.color = "white";
+          document.getElementById("toggle").attributes[0].value = "bi bi-toggle-on";
+        } else {
+          document.body.style.backgroundColor = "white";
+          document.body.style.color = "black";
+          document.getElementById("toggle").attributes[0].value = "bi bi-toggle-off";
+        }
+      }
+
+
+      function password(){
+        let password = document.getElementById("pass");
+
+        if (password.type === "password") {
+          password.type = "text";
+          document.getElementById("password").attributes[0].value = "bi bi-eye-slash-fill";
+        } else {
+          password.type = "password";
+          document.getElementById("password").attributes[0].value = "bi bi-eye-fill";
+        }
+      }
+
+      let value = 0;
+        document.getElementById("value").innerText = value;
+
+        function increment(){
+            value++;
+            document.getElementById("value").innerText = value;
+        }
+
+        function decrement(){
+            if (value >= 0) {
+                value--;
+                document.getElementById("value").innerText = value;
+            }
+        }
+    </script>
+  </body>
+</html>

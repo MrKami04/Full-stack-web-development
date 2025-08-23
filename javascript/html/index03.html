@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../js/index04.js" defer></script>
+    <script src="../js/index08.js" defer></script>
 </head>
 <body>
-    
+    <!-- DOM: Document Object Model -->
+   <h1 id="heading11">Hello, JavaScript!</h1>
+   <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, unde.</p>
+   <p class="p1">Lorem ipsum dolor sit amet consectetur.</p>
+
+   <script>
+    // id, class, tagname
+    // console.log(Document)
+
+    let heading = document.getElementById("heading11").innerText = "Hello, DOM!";
+    console.log(heading);
+
+    let paragraph = document.getElementsByClassName("p1")[0].innerText = "Hello,KAMRAN!";
+    console.log(paragraph);
+
+    // let tagus = document.getElementsByTagName("p2")[1].innerText = "Hello, TAG!";
+    // console.log(tagus);
+
+   </script>
+
+   <body>
+    <h1 class="heading1">welcome</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vel laudantium inventore rem, totam soluta expedita repellendus aspernatur incidunt est facere minima, rerum dicta voluptatum maxime doloribus ipsa quis.
+    </p>
+    <p>
+        <span class="span1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vel laudantium inventore rem, totam soluta expedita repellendus aspernatur incidunt est facere minima, rerum dicta voluptatum maxime doloribus ipsa quis.</span>
+    </p>
+    <h2 id="heading2">Hello, World!</h2>
+    <h1 class="heading1">Manny</h1>
+
+
+    <script>
+        console.log(document.querySelector("#heading2"));
+        console.log(document.querySelector(".span1"));
+        console.log(document.querySelectorAll("h1"));
+        console.log(document.querySelectorAll("h2")[0].innerText = "Hello, DOM gggg!");
+
+    </script>
+
+   </body>
 </body>
 </html>

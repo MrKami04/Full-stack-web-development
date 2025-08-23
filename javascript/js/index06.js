@@ -124,3 +124,32 @@ Scope
 //     let blockScopedVar = "I am a block scoped variable";
 //     console.log(blockScopedVar);
 // }
+
+
+// Hoisting
+
+// var : hoisting
+// example
+// console.log(hoistedVar); // Output: undefined
+// var hoistedVar = "I am hoisted";
+// console.log(hoistedVar); // Output: "I am hoisted"
+
+
+// // let
+// // console.log(letVar); // Output: ReferenceError: Cannot access 'letVar' before initialization
+// let letVar = "I am let variable";
+// console.log(letVar); // Output: "I am let variable"
+
+// // const
+// // console.log(constVar); // Output: ReferenceError: Cannot access 'constVar' before initialization
+// const constVar = "I am const variable";
+// console.log(constVar); // Output: "I am const variable"
+
+
+// // Declaration
+
+// add(22,33)
+
+// function add(a, b) {
+//     return a + b;
+// }
